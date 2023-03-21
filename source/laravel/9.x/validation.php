@@ -1,17 +1,8 @@
 <?php
 
-return [
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
+declare(strict_types=1);
 
+return [
     'accepted'             => 'The :attribute must be accepted.',
     'accepted_if'          => 'The :attribute must be accepted when :other is :value.',
     'active_url'           => 'The :attribute is not a valid URL.',
@@ -22,6 +13,7 @@ return [
     'alpha_num'            => 'The :attribute must only contain letters and numbers.',
     'array'                => 'The :attribute must be an array.',
     'ascii'                => 'The :attribute must only contain single-byte alphanumeric characters and symbols.',
+    'attributes'           => [],
     'before'               => 'The :attribute must be a date before :date.',
     'before_or_equal'      => 'The :attribute must be a date before or equal to :date.',
     'between'              => [
@@ -33,6 +25,11 @@ return [
     'boolean'              => 'The :attribute field must be true or false.',
     'confirmed'            => 'The :attribute confirmation does not match.',
     'current_password'     => 'The password is incorrect.',
+    'custom'               => [
+        'attribute-name' => [
+            'rule-name' => 'custom-message',
+        ],
+    ],
     'date'                 => 'The :attribute is not a valid date.',
     'date_equals'          => 'The :attribute must be a date equal to :date.',
     'date_format'          => 'The :attribute does not match the format :format.',
@@ -102,6 +99,11 @@ return [
         'string'  => 'The :attribute must be at least :min characters.',
     ],
     'min_digits'           => 'The :attribute must have at least :min digits.',
+    'missing'              => 'The :attribute field must be missing.',
+    'missing_if'           => 'The :attribute field must be missing when :other is :value.',
+    'missing_unless'       => 'The :attribute field must be missing unless :other is :value.',
+    'missing_with'         => 'The :attribute field must be missing when :values is present.',
+    'missing_with_all'     => 'The :attribute field must be missing when :values are present.',
     'multiple_of'          => 'The :attribute must be a multiple of :value.',
     'not_in'               => 'The selected :attribute is invalid.',
     'not_regex'            => 'The :attribute format is invalid.',
@@ -138,40 +140,10 @@ return [
     'starts_with'          => 'The :attribute must start with one of the following: :values.',
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'The :attribute must be a valid timezone.',
+    'ulid'                 => 'The :attribute must be a valid ULID.',
     'unique'               => 'The :attribute has already been taken.',
     'uploaded'             => 'The :attribute failed to upload.',
     'uppercase'            => 'The :attribute must be uppercase.',
     'url'                  => 'The :attribute must be a valid URL.',
-    'ulid'                 => 'The :attribute must be a valid ULID.',
     'uuid'                 => 'The :attribute must be a valid UUID.',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
-    'custom'               => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
-    | of "email". This simply helps us make our message more expressive.
-    |
-    */
-
-    'attributes'           => [],
 ];
